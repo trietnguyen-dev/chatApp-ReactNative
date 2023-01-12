@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button, TextInput, Image, SafeAreaView, TouchableOpacity, StatusBar, Alert } from "react-native";
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../config/firebase';
+import Login from './Login';
+
 const backImage = require("../assets/backImage.png");
 
 export default function Signup({ navigation }) {
@@ -49,7 +51,7 @@ export default function Signup({ navigation }) {
                 </TouchableOpacity>
                 <View style={{ marginTop: 20, flexDirection: 'row', alignItems: 'center', alignSelf: 'center' }}>
                     <Text style={{ color: 'gray', fontWeight: '600', fontSize: 14 }}>Don't have an account? </Text>
-                    <TouchableOpacity onPress={() => navigation.navigate("Login")}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                         <Text style={{ color: '#f57c00', fontWeight: '600', fontSize: 14 }}> Log In</Text>
                     </TouchableOpacity>
                 </View>
